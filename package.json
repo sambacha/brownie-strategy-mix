@@ -6,9 +6,11 @@
   "directories": {
     "test": "tests"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "scripts": {
+        "lint": "pretty-quick --pattern '**/*.*(sol|json)' --verbose",
+        "lint:check": "prettier --check **/*.sol **/*.json",
+        "lint:fix": "pretty-quick --pattern '**/*.*(sol|json)' --staged --verbose"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iearn-finance/brownie-strategy-mix.git"
